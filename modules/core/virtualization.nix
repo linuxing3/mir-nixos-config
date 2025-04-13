@@ -19,8 +19,13 @@
     adwaita-icon-theme
   ];
 
+  networking.nftables.enable = true;
+
   # Manage the virtualisation services
   virtualisation = {
+    podman.enable = true;
+    incus.enable = true;
+    docker.enable = true;
     libvirtd = {
       enable = true;
       qemu = {

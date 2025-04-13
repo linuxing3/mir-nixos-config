@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   services = {
+    printing.enable = true;
+    openssh.enable = true;
     gvfs.enable = true;
     gnome = {
       tinysparql.enable = true;
