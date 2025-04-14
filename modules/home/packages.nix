@@ -4,9 +4,26 @@
   ...
 }: let
   _2048 = pkgs.callPackage ../../pkgs/2048/default.nix {};
+  zigup = pkgs.callPackage ../../pkgs/zigup/default.nix {};
+  tile = pkgs.writeShellScriptBin "tile" ''
+    cmd=$(which tmux)
+    session=workspace
+    $cmd has -t $session
+    if [ $? != 0 ]; then
+    	$cmd new -d -n zsh -s $session "zsh"
+    	$cmd neww -n lf -t $session "lf"
+    	$cmd neww -n hx -t $session "hx"
+    	$cmd selectw -t session:1
+    fi
+    $cmd att -t $session
+    exit 0
+  '';
 in {
   home.packages = with pkgs; [
     # _2048
+    #
+    tile
+    zigup
 
     ## CLI utility
     ani-cli
