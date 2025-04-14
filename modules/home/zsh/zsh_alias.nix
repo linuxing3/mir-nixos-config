@@ -31,8 +31,8 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdnix = "cd ~/nixos-config && codium ~/nixos-config";
-      conf = "cd ~/nixos-config && y";
+      cdnix = "cd ~/sources/mir-nixos-config && codium ~/sources/mir-nixos-config";
+      conf = "cd ~/sources/mir-nixos-config && y";
       ns = "nom-shell --run zsh";
       nd = "nom develop --command zsh";
       nb = "nom build";
@@ -45,6 +45,9 @@
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
+
+      # nixvim
+      vvv = "nix run github:fred-drake/neovim#";
     };
   };
 }
