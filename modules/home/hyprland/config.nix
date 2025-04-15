@@ -17,11 +17,17 @@
         "swww-daemon &"
 
         "hyprlock"
+
+        "fcitx -d -r"
+        "fcitx-remote -r"
+        "emacs --daemon"
+        "foot -s"
       ];
 
       input = {
         kb_layout = "us,ru";
-        kb_options = "grp:alt_caps_toggle";
+        # kb_options = "grp:alt_caps_toggle";
+        kb_options = "ctrl:no_caps";
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 0;

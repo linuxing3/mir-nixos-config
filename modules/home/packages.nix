@@ -10,9 +10,9 @@
     session=workspace
     $cmd has -t $session
     if [ $? != 0 ]; then
-    	$cmd new -d -n zsh -s $session "zsh"
-    	$cmd neww -n lf -t $session "lf"
-    	$cmd neww -n hx -t $session "hx"
+    	$cmd new -d -n zsh -s $session "yazi"
+    	$cmd neww -n lf -t $session "zsh"
+    	$cmd neww -n hx -t $session "zsh"
     	$cmd selectw -t session:1
     fi
     $cmd att -t $session
@@ -24,6 +24,11 @@ in {
     #
     tile
     zigup
+
+    foot
+    fish
+    alacritty
+    wezterm
 
     ## CLI utility
     ani-cli
@@ -122,7 +127,7 @@ in {
 
     # C / C++
     gcc
-    # gdb
+    gdb
     # gnumake
 
     # Node.js

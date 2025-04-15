@@ -20,7 +20,7 @@
   # To prevent getting stuck at shutdown
   systemd.extraConfig = "DefaultTimeoutStopSec=10s";
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    enable = "fcitx5";
     fcitx5.addons = with pkgs; [
       rime-data
       librime
