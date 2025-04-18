@@ -34,5 +34,45 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [networkmanagerapplet];
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet
+
+    neomutt
+
+    mutt
+    mutt-with-sidebar
+    mutt-wizard
+
+    notmuch
+    notmuch-mutt
+
+    offlineimap
+    postfix
+    postfixadmin
+
+    fdm
+    isync
+    msmtp
+  ];
+
+  programs.msmtp = {
+    enable = true;
+    accounts.default = {
+      auth = true;
+      tls = true;
+      host = "smtp.qq.com";
+      from = "linuxing3@qq.com";
+      user = "linuxing3@qq.com";
+      password = "cat /home/linuxing3/qq_mail_pass.txt";
+      aliases = "/etc/aliases";
+    };
+  };
+  environment.etc = {
+    "aliases" = {
+      text = ''
+        root: linuxing3@qq.com
+      '';
+      mode = "0644";
+    };
+  };
 }

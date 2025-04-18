@@ -39,7 +39,7 @@ print_header() {
    | .` | \ \ / (_) (_-<| || ' \(_-<  _/ _` | | / -_) '_|
    |_|\_|_/_\_\\___//__/___|_||_/__/\__\__,_|_|_\___|_|
 
-                  $BLUE https://github.com/mirrrrrrrrrrrr $RED
+                  $BLUE https://github.com/linuxing3 $RED
       ! To make sure everything runs correctly DONT run as root ! $GREEN
                         -> '"./install.sh"' $NORMAL
 
