@@ -10,9 +10,9 @@
     session=workspace
     $cmd has -t $session
     if [ $? != 0 ]; then
-    	$cmd new -d -n zsh -s $session "yazi"
-    	$cmd neww -n lf -t $session "zsh"
-    	$cmd neww -n hx -t $session "zsh"
+    	$cmd new -d -n yazi -s $session "yazi"
+    	$cmd neww -n zsh -t $session "zsh"
+    	$cmd neww -n zsh -t $session "zsh"
     	$cmd selectw -t session:1
     fi
     $cmd att -t $session

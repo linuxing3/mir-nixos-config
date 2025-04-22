@@ -46,6 +46,10 @@
     notmuch
     notmuch-mutt
 
+    getmail6
+    w3m-full
+    elinks
+
     offlineimap
     postfix
     postfixadmin
@@ -57,13 +61,16 @@
 
   programs.msmtp = {
     enable = true;
+    defaults = {
+      aliases = "/etc/aliases";
+    };
     accounts.default = {
       auth = true;
       tls = true;
       host = "smtp.qq.com";
       from = "linuxing3@qq.com";
       user = "linuxing3@qq.com";
-      password = "cat /home/linuxing3/qq_mail_pass.txt";
+      passwordeval = "cat /home/linuxing3/qq_mail_pass.txt";
       aliases = "/etc/aliases";
     };
   };
@@ -73,6 +80,19 @@
         root: linuxing3@qq.com
       '';
       mode = "0644";
+    };
+  };
+
+  systemd.user.services = {
+    "isync" = {
+      enable = true;
+      after = ["network.target"];
+      wantedBy = ["default.target"];
+      serviceConfig = {
+        RestartSec = 5;
+        Type = "oneshot";
+        ExecStart = ''${pkgs.isync}/bin/mbsync -Va'';
+      };
     };
   };
 }

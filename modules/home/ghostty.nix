@@ -9,6 +9,7 @@ in {
   home.packages = with pkgs; [ghostty];
 
   xdg.configFile."ghostty/config".text = ''
+    commmand = "tile"
     # Font
     font-family = "Maple Mono"
     font-size = ${
