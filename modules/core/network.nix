@@ -82,17 +82,4 @@
       mode = "0644";
     };
   };
-
-  systemd.user.services = {
-    "isync" = {
-      enable = true;
-      after = ["network.target"];
-      wantedBy = ["default.target"];
-      serviceConfig = {
-        RestartSec = 5;
-        Type = "oneshot";
-        ExecStart = ''${pkgs.isync}/bin/mbsync -Va'';
-      };
-    };
-  };
 }

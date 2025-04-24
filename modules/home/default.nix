@@ -9,6 +9,7 @@
     ./audacious.nix # music player
     ./bat.nix # better cat command
     ./browser.nix # firefox based browser
+    ./mail # email accounts
     ./btop.nix # resouces monitor
     ./cava.nix # audio visualizer
     ./discord/discord.nix # discord with gruvbox
