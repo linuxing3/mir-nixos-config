@@ -38,7 +38,7 @@
     age
   ];
 
-  sops.defaultSopsFile = "./secrets/password.yaml";
+  sops.defaultSopsFile = ./secrets/password.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
 
