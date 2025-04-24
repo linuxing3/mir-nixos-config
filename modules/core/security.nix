@@ -35,9 +35,19 @@
     gopass-jsonapi
 
     sops
+    age
   ];
 
-  sops.defaultSopsFile = /home/${username}/secrets/password.yaml;
+  sops.defaultSopsFile = ./secrets/password.yaml;
   sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "/home/${username}/secrets/key.txt";
+  sops.age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
+
+  #  general password
+  sops.secrets.github = {};
+  # github token
+  sops.secrets.password = {};
+  # qq email password
+  sops.secrets."email/qq" = {};
+  # mfa email password
+  sops.secrets."email/mfa" = {};
 }
