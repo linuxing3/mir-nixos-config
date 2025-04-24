@@ -1,0 +1,9 @@
+keys:
+      - &primary AGE-SECRET-KEY-16U2JC97WKJFTUULRSRL6F8HT8Q769206KCZ2XQ94WGNU3KGA254Q842V2Z creation_rules:
+creation_rules:
+      - path_regex: secrets/password.yaml&
+        key_groups:
+        - age:
+              - *primary
+      - pgp: >-
+            92459E82DDC7785CE98BE95AD88DA5BBDE095390
