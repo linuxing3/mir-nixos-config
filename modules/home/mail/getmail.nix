@@ -1,19 +1,24 @@
 {
   config,
   lib,
+  inputs,
+  username,
   ...
 }: let
   accountConfig = ''
     [retriever]
     type = SimplePOP3SSLRetriever
     server = mail.mfa.gov.cn
+    port = 993
+    ssl_version = tlsv1_2
+    ssl_ciphers = AES128-SHA
 
     username = xing_wenju@mfa.gov.cn
-    password_command = ('cat', '/home/linuxing3/mfa_mail_pass.txt')
+    password_command = ('cat', '/home/${username}/mfa_mail_pass.txt')
 
     [destination]
     type = Maildir
-    path = /home/linuxing3/Mail/mfa/
+    path = /home/${username}/Mail/mfa/
 
     [options]
     delete = false
@@ -27,7 +32,7 @@ in {
         address = "xing_wenju@mfa.gov.cn";
         userName = "xing_wenju@mfa.gov.cn";
         realName = "Xing Wenju";
-        passwordCommand = "cat /home/linuxing3/mfa_mail_pass.txt";
+        passwordCommand = "cat /home/${username}/mfa_mail_pass.txt";
         imap.host = "mail.mfa.gov.cn";
         imap.tls.useStartTls = true;
         smtp.host = "mail.mfa.gov.cn";

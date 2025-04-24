@@ -1,8 +1,12 @@
 {
   username,
   pkgs,
+  inputs,
   ...
 }: {
+  imports = [
+    inputs.sops-nix.nixosModules.sops
+  ];
   security.rtkit.enable = true;
   security.pam.services.swaylock = {};
   security.pam.services.hyprlock = {};
@@ -32,4 +36,8 @@
 
     sops
   ];
+
+  sops.defaultSopsFile = /home/${username}/secrets/password.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/${username}/secrets/key.txt";
 }

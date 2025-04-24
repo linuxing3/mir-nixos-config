@@ -1,9 +1,12 @@
 {
   inputs,
+  config,
   pkgs,
   host,
+  username,
   ...
-}: {
+}: let
+in {
   imports = [./getmail.nix];
   programs.neomutt = {
     enable = true;

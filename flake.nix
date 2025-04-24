@@ -40,6 +40,8 @@
     zig.url = "github:mitchellh/zig-overlay";
 
     nvf.url = "github:notashelf/nvf";
+
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
