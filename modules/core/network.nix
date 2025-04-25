@@ -49,6 +49,9 @@
     getmail6
     fetchmail
 
+    procmail
+    maildrop
+
     w3m-full
     elinks
 

@@ -9,7 +9,7 @@
     [retriever]
     type = SimplePOP3SSLRetriever
     server = mail.mfa.gov.cn
-    port = 993
+    port = 995
     ssl_version = tlsv1_2
     ssl_ciphers = AES128-SHA
 
@@ -22,7 +22,7 @@
 
     [options]
     delete = false
-    read_all = true
+    read_all = false
   '';
 in {
   accounts.email = {
