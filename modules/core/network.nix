@@ -47,6 +47,8 @@
     notmuch-mutt
 
     getmail6
+    fetchmail
+
     w3m-full
     elinks
 
@@ -70,7 +72,7 @@
       host = "smtp.qq.com";
       from = "linuxing3@qq.com";
       user = "linuxing3@qq.com";
-      passwordeval = "cat /home/linuxing3/qq_mail_pass.txt";
+      passwordeval = "cat /run/secrets/email/qq";
       aliases = "/etc/aliases";
     };
   };

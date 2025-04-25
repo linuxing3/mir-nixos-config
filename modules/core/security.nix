@@ -43,11 +43,19 @@
   sops.age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
 
   #  general password
-  sops.secrets.github = {};
+  sops.secrets.github = {
+    owner = "${username}";
+  };
   # github token
-  sops.secrets.password = {};
+  sops.secrets.password = {
+    owner = "${username}";
+  };
   # qq email password
-  sops.secrets."email/qq" = {};
+  sops.secrets."email/qq" = {
+    owner = "${username}";
+  };
   # mfa email password
-  sops.secrets."email/mfa" = {};
+  sops.secrets."email/mfa" = {
+    owner = "${username}";
+  };
 }

@@ -14,7 +14,7 @@
     ssl_ciphers = AES128-SHA
 
     username = xing_wenju@mfa.gov.cn
-    password_command = ('cat', '/home/${username}/mfa_mail_pass.txt')
+    password_command = ('cat', '/run/secrets/email/mfa')
 
     [destination]
     type = Maildir
@@ -32,7 +32,7 @@ in {
         address = "xing_wenju@mfa.gov.cn";
         userName = "xing_wenju@mfa.gov.cn";
         realName = "Xing Wenju";
-        passwordCommand = "cat /home/${username}/mfa_mail_pass.txt";
+        passwordCommand = "cat /run/secrets/email/mfa";
         imap.host = "mail.mfa.gov.cn";
         imap.tls.useStartTls = true;
         smtp.host = "mail.mfa.gov.cn";

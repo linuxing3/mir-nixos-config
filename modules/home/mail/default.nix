@@ -27,7 +27,7 @@ in {
         address = "linuxing3@qq.com";
         userName = "linuxing3";
         realName = "Xing Wenju";
-        passwordCommand = "cat /home/linuxing3/qq_mail_pass.txt";
+        passwordCommand = "cat /run/secrets/email/qq";
         imap.port = 993;
         imap.host = "imap.qq.com";
         imap.tls.useStartTls = true;
