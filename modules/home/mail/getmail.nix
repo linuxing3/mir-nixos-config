@@ -18,13 +18,14 @@
 
     [destination]
     type = Maildir
-    path = /home/${username}/Mail/mfa/
+    path = /home/${username}/Mail/mfa/Inbox
 
     [options]
     delete = false
     read_all = false
   '';
 in {
+  services.getmail = {enable = true;};
   accounts.email = {
     accounts = {
       mfa = {

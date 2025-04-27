@@ -11,6 +11,7 @@
     $cmd has -t $session
     if [ $? != 0 ]; then
     	$cmd new -d -n yazi -s $session "yazi"
+    	$cmd neww -n mail -t $session "neomutt"
     	$cmd neww -n zsh -t $session "zsh"
     	$cmd neww -n zsh -t $session "zsh"
     	$cmd selectw -t session:1

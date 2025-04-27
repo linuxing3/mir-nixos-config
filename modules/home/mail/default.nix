@@ -13,8 +13,6 @@ in {
     vimKeys = false;
   };
 
-  services.getmail = {enable = true;};
-
   programs.mbsync.enable = true;
   services.mbsync.enable = true;
 

@@ -32,9 +32,9 @@
     enable = true;
     autoMaster = let
       mapConf = pkgs.writeText "autofs.mnt" ''
-        windows -fstype=ntfs :/dev/disk/by-partid/5b671066-02
-        app -fstype=ntfs :/dev/disk/by-partid/5b671066-03
-        data -fstype=ntfs :/dev/disk/by-partid/5b671066-05
+        windows -fstype=ntfs :/dev/disk/by-uuid/CAA069BBA069AF1F
+        app -fstype=ntfs :/dev/disk/by-uuid/283698C136989204
+        data -fstype=ntfs :/dev/disk/by-uuid/2286A96C86A94161
       '';
     in ''
       /autofs ${mapConf} --timeout 20
