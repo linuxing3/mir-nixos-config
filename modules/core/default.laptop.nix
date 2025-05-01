@@ -9,7 +9,7 @@
   imports = [
     ./bootloader.nix
     ./hardware.nix
-    ./xserver.nix
+    # ./xserver.nix
     ./network.nix
     ./nh.nix
     ./pipewire.nix
@@ -19,8 +19,8 @@
     # ./steam.nix
     ./system.nix
     # ./flatpak.nix
-    ./user.nix
-    ./wayland.nix
+    ./user.laptop.nix
+    # ./wayland.nix
     # ./virtualization.nix
   ];
 }
