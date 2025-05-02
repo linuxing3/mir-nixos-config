@@ -12,6 +12,7 @@
     ./fzf.nix # fuzzy finder
     ./git.nix # version control
     ./helix.nix # helix text editor
+    ./kitty.nix # terminal
     ./lazygit.nix
     ./micro.nix # nano replacement
     ./nemo.nix # file manager
@@ -24,5 +25,17 @@
     ./yazi.nix # terminal file manager
     ./lf.nix # terminal file manager
     ./zsh # shell
+    # gui
+    ./rofi.nix # launcher
+    ./browser.nix # firefox based browser
+    ./gnome.nix # gnome apps
+    ./gtk.nix # gtk theme
+    ./hyprland # window manager
+    ./swaylock.nix # lock screen
+    ./swayosd.nix # brightness / volume wiget
+    ./swaync/swaync.nix # notification deamon
+    ./waybar # status bar
+    ./waypaper.nix # GUI wallpaper picker
+    ./xdg-mimes.nix # xdg config
   ];
 }
