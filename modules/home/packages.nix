@@ -24,7 +24,7 @@ in {
     # _2048
     #
     tile
-    # zigup
+    zigup
 
     foot
     fish

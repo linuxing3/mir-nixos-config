@@ -99,7 +99,8 @@
         };
 
         "C-p" = {
-          a = [":cd ~/sources/linuxing3-nixos-config"];
+          a = [":cd ~/sources/mir-nixos-config"];
+          i = [":cd ~/sources/linuxing3-nixos-config"];
           b = [":cd ~/sources/nixpkgs"];
           c = [":cd ~/sources/home-manager"];
           d = [":cd ~/sources/nix-templates"];
@@ -107,7 +108,6 @@
           f = [":cd ~/sources/devbox"];
           g = [":cd ~/.config/emacs"];
           h = [":cd ~/.config/doom"];
-          i = [":cd ~/.config/helix"];
         };
 
         "+" = {

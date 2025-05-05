@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/marler8997/zigup/releases/latest/download/zigup-x86_64-linux.tar.gz";
-    sha256 = "08jma27gc8paq5mh0cfqh4hi52accf498z6i76p4na1lk8vdh4ql";
+    sha256 = "1y9kql9a558z5dz2ih2pqgcib7d15x3f6kwrdnf2drrs07m3gyzd";
   };
 
   unpackPhase = ''
