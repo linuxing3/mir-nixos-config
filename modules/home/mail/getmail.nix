@@ -18,7 +18,7 @@
 
     [destination]
     type = Maildir
-    path = /home/${username}/Mail/mfa/Inbox
+    path = /home/${username}/Mail/mfa/Inbox/
 
     [options]
     delete = false
