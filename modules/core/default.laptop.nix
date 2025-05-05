@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [
-    ./bootloader.nix
+    ./bootloader.laptop.nix
     ./hardware.nix
     # ./xserver.nix
     ./network.nix
