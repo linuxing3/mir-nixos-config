@@ -16,6 +16,8 @@ in {
   programs.mbsync.enable = true;
   services.mbsync.enable = true;
 
+  programs.himalaya.enable = true;
+
   accounts.email = {
     maildirBasePath = "Mail";
 
@@ -29,10 +31,12 @@ in {
         imap.port = 993;
         imap.host = "imap.qq.com";
         imap.tls.useStartTls = true;
+        smtp.port = 465;
         smtp.host = "smtp.qq.com";
         smtp.tls.useStartTls = true;
-        notmuch.enable = true;
+        # notmuch.enable = true;
         msmtp.enable = true;
+        himalaya.enable = true;
         mbsync = {
           enable = true;
           create = "maildir";

@@ -1,0 +1,2 @@
+run:
+    nh os switch
