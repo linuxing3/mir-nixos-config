@@ -20,11 +20,21 @@
     exit 0
   '';
 in {
+  home.sessionPath = [
+    "$HOME/.bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.local/bin"
+    "$HOME/.local/share/bin"
+    "$HOME/.config/emacs/bin"
+    ".git/safe/../../bin"
+  ];
   home.packages = with pkgs; [
     # _2048
     #
     tile
     zigup
+
+    just
 
     foot
     fish
@@ -55,6 +65,30 @@ in {
     libnotify
     man-pages # extra man pages
     mimeo
+
+    # useful tui tools
+    tui-journal
+    zellij
+    calcurse
+    neofetch
+    parted
+    putty
+    socat
+    xray
+    shadowsocks-rust
+    trojan-rs
+
+    pandoc
+    pandoc-plantuml-filter
+    pandoc-drawio-filter
+
+    plantuml
+
+    present-cli
+
+    mermaid-cli
+    marksman
+
     # mpv # video player
     ncdu # disk space
     nitch # systhem fetch util
@@ -136,6 +170,8 @@ in {
 
     # Rust
     rustc
+    cargo
+    cargo-binstall
 
     # Zig
     # inputs.zig.packages.${system}.master
