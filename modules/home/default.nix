@@ -39,7 +39,8 @@
     ./swayosd.nix # brightness / volume wiget
     ./swaync/swaync.nix # notification deamon
     ./tmux.nix # tmux terminal window manager
-    # ./viewnior.nix                    # image viewer
+    ./zellij.nix # tmux replacement
+    # ./viewnior.nix     # image viewer
     ./vscodium.nix # vscode forck
     ./waybar # status bar
     ./waypaper.nix # GUI wallpaper picker

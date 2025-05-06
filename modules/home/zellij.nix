@@ -3,8 +3,8 @@
     zellij = {
       enable = true;
 
-      attachExistingSession = true;
-      exitShellOnExit = true;
+      # attachExistingSession = true;
+      # exitShellOnExit = true;
 
       enableZshIntegration = true;
       enableFishIntegration = true;
@@ -12,5 +12,5 @@
     };
   };
 
-  home.file."./config/zellij/config.kdl".source = ./config.kdl;
+  home.file.".config/zellij/config.kdl".source = ./config.kdl;
 }
