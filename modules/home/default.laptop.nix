@@ -22,8 +22,10 @@
     ./spicetify.nix # spotify client
     ./starship.nix # shell prompt
     ./tmux.nix # tmux terminal window manager
+    ./zellij.nix # tmux replacement
     ./yazi.nix # terminal file manager
     ./lf.nix # terminal file manager
+    ./ranger.nix # terminal file manager
     ./zsh # shell
     # gui
     ./rofi.nix # launcher

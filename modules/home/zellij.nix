@@ -10,9 +10,6 @@
       enableFishIntegration = true;
       enableBashIntegration = true;
     };
-    bash.enable = true;
-    zsh.enable = true;
-    fish.enable = true;
   };
 
   home.file."./config/zellij/config.kdl".source = ./config.kdl;

@@ -36,8 +36,11 @@ in {
 
     just
 
-    foot
     fish
+    bash
+    nushell
+
+    foot
     alacritty
     wezterm
 
@@ -89,7 +92,7 @@ in {
     mermaid-cli
     marksman
 
-    # mpv # video player
+    mpv # video player
     ncdu # disk space
     nitch # systhem fetch util
     nixd # nix lsp
