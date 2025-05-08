@@ -27,4 +27,22 @@
     GTK_THEME = "Colloid-Green-Dark-Gruvbox";
     GRIMBLAST_HIDE_CURSOR = 0;
   };
+  home.shellAliases = {
+    "..." = "cd ../..";
+    "noproxy" = "export HTTPS_PROXY=;export HTTP_PROXY=";
+    xp = "kitty tmuxp load ~/.config/tmux/dev.yml";
+    xh = "hyprctl reload";
+    xn = "nh os switch";
+    j = "just";
+    jr = "just run";
+    jb = "just build";
+    st = "nix-shell -p xst.out --run xst > /dev/null 2>&1";
+    ec = "emacsclient -r -nw";
+    es = "emacs --daemon";
+    zj = "zellij";
+    fz = "footclient zellij";
+    ft = "footclient tmux";
+    fy = "footclient yazi";
+    fl = "footclient lf";
+  };
 }

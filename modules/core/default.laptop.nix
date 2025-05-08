@@ -10,7 +10,7 @@
   imports = [
     ./bootloader.laptop.nix
     ./hardware.nix
-    # ./xserver.nix
+    ./xserver.nix
     ./network.nix
     ./nh.nix
     ./pipewire.nix

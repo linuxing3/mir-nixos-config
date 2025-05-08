@@ -92,6 +92,9 @@ in {
     mermaid-cli
     marksman
 
+    comodoro
+    pomodoro
+
     mpv # video player
     ncdu # disk space
     nitch # systhem fetch util

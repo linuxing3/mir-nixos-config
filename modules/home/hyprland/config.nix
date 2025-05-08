@@ -27,7 +27,8 @@
       input = {
         kb_layout = "us,ru";
         # kb_options = "grp:alt_caps_toggle";
-        kb_options = "ctrl:no_caps";
+        # kb_options = "ctrl:swapescape";
+        kb_options = "ctrl:nocaps";
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 0;
@@ -145,8 +146,8 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, ghostty"
-        "ALT, Return, exec, [float; size 1111 700] ghostty"
+        "$mainMod, Return, exec, kitty zellij"
+        "ALT, Return, exec, [float; size 1111 700] footclient zellij"
         "$mainMod SHIFT, Return, exec, [fullscreen] ghostty"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] zen'"
         "$mainMod, Q, killactive,"
